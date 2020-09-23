@@ -1,5 +1,34 @@
 # BambuNews
 
+#### This a simple project made it with Angular 10 and Firebase 👍📖🚀 👇
+
+[App Demo](https://angular-bambu-news.web.app/) 👈👈👈
+\*\* **The app only work on development mode because the [News Api](https://newsapi.org/) dont admit Http Requests in the Developer Plan.** \*\*
+
+#### 📖Features:
+
+    ▶️ Frontend Development with Angular 10
+    ▶️ Firebase Authentication
+    ▶️ Firebase Hosting
+    ▶️ Register and Login
+    ▶️ Email Verification
+    ▶️ Forgot Password Resent
+    ▶️ Http Request for get the news
+    ▶️ News Filter by country and category
+    ▶️ Responsive Design
+
+#### 🧰Tools and Languages:
+
+    ▶️ Angular 10
+    ▶️ Bootstrap 4.5
+    ▶️ Firebase
+    ▶️ NPM
+    ▶️ Fontsawesome
+    ▶️ VSCode
+
+**Screenshot**
+![screen](screen.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server

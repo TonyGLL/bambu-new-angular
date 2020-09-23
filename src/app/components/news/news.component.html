@@ -1,0 +1,72 @@
+<div class="container main">
+  <div class="d-flex justify-content-start inputs">
+    <div class="form-group">
+      <label for="country">País: </label>
+      <select [(ngModel)]="selectedCountry.name" (change)="onSelectCountry($event.target.value)" class="form-control"
+        id="country">
+        <option *ngFor="let country of countries" selected="selected" [value]="country.sigla">{{ country.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Categoría: </label>
+      <select [(ngModel)]="selectedCategory.name" (change)="onSelectCategory($event.target.value)" class="form-control"
+        id="category">
+        <option *ngFor="let category of categories" selected="selected" [value]="category.sigla">{{ category.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row m-0 p-0">
+    <div class="posts col-xs-12 col-md-6 col-lg-4 m-0 p-0" *ngFor="let post of posts">
+      <div class="card posts__card" lazy="loading">
+        <a href="{{ post.url }}" target="blank">
+          <div class="card-header posts__header">
+            <img src="{{ post.urlToImage }}" class="img" alt="Extensión de Imagen no soportada">
+          </div>
+          <div class="card-body posts__body"
+            *ngIf="post.title && post.publishedAt && post.description && post.author; else other">
+            <p class="title">{{ lessTitleCharacters(post.title) }}</p>
+            <p class="published">Publicado: {{ convertDate(post.publishedAt) }}</p>
+            <div class="text3">
+              <div>{{ lessDescriptionCharacters(post.description) }}...</div>
+              <div>Por: {{ lessAuthor(post.author) }}</div>
+            </div>
+          </div>
+          <ng-template #other>
+            <div class="card-body posts__body">
+              <p class="title">Aloqwk aseo askeia asuue loe...</p>
+              <p class="published">Publicado: 2020-03-10</p>
+              <div class="text3">
+                <div>Laskkuh asjj grotes assiret asfuurb...</div>
+                <div>Por: Alberto Rodriguez</div>
+              </div>
+            </div>
+          </ng-template>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div align="center" *ngIf="newsService.loading" class="p-3">
+
+    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40"
+      xml:space="preserve">
+      <path opacity="0.2" fill="#000"
+        d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+      s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+      c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+      <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+      C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20"
+          dur="0.5s" repeatCount="indefinite" />
+      </path>
+    </svg>
+
+    <p>Espere...</p>
+
+  </div>
+</div>

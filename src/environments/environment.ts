@@ -14,6 +14,7 @@ export const environment = {
     appId: '1:717099730458:web:0a8c5594f6d7d3534773a3',
     measurementId: 'G-4BFSQ4Q9LK',
   },
+  baseUrlAPI: 'https://newsapi.org/v2/top-headlines',
 };
 
 /*

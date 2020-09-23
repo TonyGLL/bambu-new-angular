@@ -1,0 +1,11 @@
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
+}
+
+.card-header {
+  background: #73d45f;
+  color: #19580c;
+}

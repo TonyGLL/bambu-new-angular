@@ -6,11 +6,28 @@
     <p>Noticias</p>
   </div>
   <div class="profile">
-    <div class="email">
-      <p>tonygllambia@gmail.com</p>
+    <div *ngIf="user$ | async as user; else login" class="check">
+      <div *ngIf="user" class="isLogged">
+        <div class="email">
+          <p>{{ user?.email }}</p>
+        </div>
+        <div class="user" (click)="userClick()">
+          <i class="far fa-user icon"></i>
+        </div>
+        <div class="logout" (click)="onLogout()" *ngIf=" clicked">
+          <a href="">Log out</a>
+        </div>
+      </div>
+      <div *ngIf="!user" class="noLogged">
+        <a routerLink="/login" class="login">Login</a>
+        <a routerLink="/register" class="register">Register</a>
+      </div>
     </div>
-    <div class="user">
-      <i class="far fa-user icon"></i>
-    </div>
+    <ng-template #login>
+      <div class="noLogged">
+        <a routerLink="/login" class="login">Login</a>
+        <a routerLink="/register" class="register">Register</a>
+      </div>
+    </ng-template>
   </div>
 </div>
