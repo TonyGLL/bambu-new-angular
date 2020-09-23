@@ -6,6 +6,13 @@
 
 \*\* **The app only work on development mode because the [News Api](https://newsapi.org/) dont admit Http Requests in the Developer Plan.** \*\*
 
+Follow this steps:
+```
+git clone https://github.com/TonyGLL/bambu-new-angular.git
+cd bambu-news-angular
+ng serve
+```
+
 #### 📖Features:
 
     ▶️ Frontend Development with Angular 10
@@ -29,13 +36,6 @@
 
 **Screenshot**
 ![screen](screen.png)
-
-Follow this steps:
-```
-git clone https://github.com/TonyGLL/bambu-new-angular.git
-cd bambu-news-angular
-ng serve
-```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
