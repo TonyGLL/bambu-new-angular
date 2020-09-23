@@ -23,6 +23,7 @@ export class NewsComponent implements OnInit {
     name: 'Business',
     sigla: 'business',
   };
+
   public countries: Country[];
   public categories: Category[];
 
@@ -76,28 +77,28 @@ export class NewsComponent implements OnInit {
   }
 
   // REDUCE THE TITLE CHARACTERS
-  lessTitleCharacters(text: string) {
+  lessTitleCharacters(text: string): string {
     const less = text;
     const separate = `${less.split('').slice(0, 25).join('')}...`;
     return separate;
   }
 
   // REDUCE THE DESCRIPTION CHARACTERS
-  lessDescriptionCharacters(text: string) {
+  lessDescriptionCharacters(text: string): string {
     const less = text;
     const separate = less.split('').slice(0, 34).join('');
     return separate;
   }
 
   // REDUCE THE AUTHOR CHARACTERS
-  lessAuthor(text: string) {
+  lessAuthor(text: string): string {
     const less = text;
     const separate = less.split('').slice(0, 20).join('');
     return separate;
   }
 
   // CONVERT THE DATE
-  convertDate(date: string) {
+  convertDate(date: string): string {
     const toConvert = date;
     const x = toConvert.split('').slice(0, 10).join('');
     const y = x.split('-').join('-');

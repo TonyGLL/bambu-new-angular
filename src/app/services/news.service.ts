@@ -10,6 +10,8 @@ import { Country, Category } from '../models/country_category.interface';
 })
 export class NewsService {
   loading = false;
+
+  // COUNTRIES DATA
   public countries: Country[] = [
     { name: 'México', sigla: 'mx' },
     { name: 'Estados Unidos', sigla: 'us' },
@@ -17,6 +19,7 @@ export class NewsService {
     { name: 'Colombia', sigla: 'co' },
   ];
 
+  // CATEGORIES DATA
   public categories: Category[] = [
     { name: 'Business', sigla: 'business' },
     { name: 'Entertainment', sigla: 'entertainment' },
@@ -35,9 +38,9 @@ export class NewsService {
     return this.categories;
   }
 
+  // SEARCH POSTS REQUEST
   searchPosts(country: string = 'mx', category: string = 'business') {
-    const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const filter = `${proxy}${environment.baseUrlAPI}?country=${country}&category=${category}&apikey=a0659c4da9454c06bc2cc4431c3feb1f`;
+    const filter = `${environment.baseUrlAPI}?country=${country}&category=${category}&apikey=a0659c4da9454c06bc2cc4431c3feb1f`;
     return this.http.get<Post[]>(filter);
   }
 }
