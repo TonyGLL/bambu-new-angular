@@ -3,6 +3,7 @@
 #### This a simple project made it with Angular 10 and Firebase 👍📖🚀 👇
 
 [App Demo](https://angular-bambu-news.web.app/) 👈👈👈
+
 \*\* **The app only work on development mode because the [News Api](https://newsapi.org/) dont admit Http Requests in the Developer Plan.** \*\*
 
 #### 📖Features:
