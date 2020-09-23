@@ -26,8 +26,12 @@
     ▶️ Fontsawesome
     ▶️ VSCode
 
-**Screenshot**
+**Desktop View**
 ![screen](screen.png)
+
+**Mobile View**
+![screen2](screen2.png)
+![screen3](screen3.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
