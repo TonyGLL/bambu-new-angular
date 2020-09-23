@@ -9,7 +9,7 @@
 Follow this steps:
 ```
 git clone https://github.com/TonyGLL/bambu-new-angular.git
-cd bambu-news-angular
+cd bambu-new-angular
 ng serve
 ```
 
