@@ -30,6 +30,13 @@
 **Screenshot**
 ![screen](screen.png)
 
+Follow this steps:
+```
+git clone https://github.com/TonyGLL/bambu-new-angular.git
+cd bambu-news-angular
+ng serve
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
